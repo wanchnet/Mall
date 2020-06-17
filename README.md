@@ -28,14 +28,10 @@
 |uniapp   |跨端方案   |
 
 #### 项目截图
-|![登录](https://images.gitee.com/uploads/images/2020/0617/224151_6f08b071_7705829.jpeg "在这里输入图片标题")   |![注册](https://images.gitee.com/uploads/images/2020/0617/224911_c98b11c4_7705829.jpeg "Screenshot_2020-06-17-22-37-57-000_io.dcloud.HBui.jpg") |![输入图片说明](https://images.gitee.com/uploads/images/2020/0617/224946_6eb7ec5c_7705829.jpeg "Screenshot_2020-06-17-22-37-11-364_io.dcloud.HBui.jpg")   |![输入图片说明](https://images.gitee.com/uploads/images/2020/0617/225001_5590a085_7705829.jpeg "Screenshot_2020-06-17-22-37-22-617_io.dcloud.HBui.jpg")
-|---|---|---|---|
-|![输入图片说明](https://images.gitee.com/uploads/images/2020/0617/225019_fc1afa8d_7705829.jpeg "Screenshot_2020-06-17-22-37-36-396_io.dcloud.HBui.jpg")   | ![输入图片说明](https://images.gitee.com/uploads/images/2020/0617/225032_3eea5d2e_7705829.jpeg "Screenshot_2020-06-17-22-39-38-174_io.dcloud.HBui.jpg")  | ![输入图片说明](https://images.gitee.com/uploads/images/2020/0617/225102_8af01dca_7705829.jpeg "Screenshot_2020-06-17-22-39-09-532_io.dcloud.HBui.jpg")  |![输入图片说明](https://images.gitee.com/uploads/images/2020/0617/225130_608b4908_7705829.jpeg "Screenshot_2020-06-17-22-37-16-442_io.dcloud.HBui.jpg")  |
+
 
 #### 技术交流与问题反馈
-|QQ群   |微信   |
-|---|---|
-|![QQ](https://images.gitee.com/uploads/images/2020/0617/225933_f9b5374a_7705829.png "Snipaste_2020-06-17_22-59-14.png")   |![微信](https://images.gitee.com/uploads/images/2020/0617/230020_08da31b3_7705829.png "Snipaste_2020-06-17_23-00-01.png")   |
+请加群：235825022
 
 如果您觉得有帮助，请点右上角 "Star" 支持一下谢谢
 
