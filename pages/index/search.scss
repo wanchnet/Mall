@@ -1,0 +1,51 @@
+.content{
+	.bangs{
+		height: var(--status-bar-height);
+	}
+	.search-row{
+		position: relative;
+		.input-group{
+			position: relative;
+			height: 56upx;
+			width: calc(100% - 100upx);
+			background-color: rgb(248, 248, 248);
+			border-radius: 28upx;
+			.search-icon{
+				width: 56upx;
+			}
+			.search-input{
+				position: relative;
+				width: calc(100% - 56upx);
+				input{
+					line-height: 56upx;
+					height: 56upx;
+				}
+				.uni-input-placeholder{
+					text-align: center;
+				}
+			}
+		}
+		.opt{
+			width: 100upx;
+			line-height: 56upx;
+		}
+	}
+	.keywords{
+		margin-top:80upx;
+		.title{
+			margin-bottom: 30upx;
+		}
+		.list-keyword{
+			.keyword{
+				background-color: rgb(242, 165, 165);
+				height: 40upx;
+				padding-left:20upx;
+				padding-right: 20upx;
+				float: left;
+				margin-right: 20upx;
+				margin-bottom: 20upx;
+				border-radius: 20upx;
+			}
+		}
+	}
+}

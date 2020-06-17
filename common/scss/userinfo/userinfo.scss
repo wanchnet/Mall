@@ -1,0 +1,109 @@
+page{
+		background: $page-color-base;
+	}
+	.user-section{
+		display:flex;
+		align-items:center;
+		justify-content: center;
+		height: 460upx;
+		padding: 40upx 30upx 0;
+		position:relative;
+		.bg{
+			position:absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			filter: blur(1px);
+			opacity: .7;
+		}
+		.portrait-box{
+			width: 200upx;
+			height: 200upx;
+			border:6upx solid #fff;
+			border-radius: 50%;
+			position:relative;
+			z-index: 2;
+		}
+		.portrait{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
+		.yticon{
+			position:absolute;
+			line-height: 1;
+			z-index: 5;
+			font-size: 48upx;
+			color: #fff;
+			padding: 4upx 6upx;
+			border-radius: 6upx;
+			background: rgba(0,0,0,.4);
+		}
+		.pt-upload-btn{
+			right: 0;
+			bottom: 10upx;
+		}
+		.bg-upload-btn{
+			right: 20upx;
+			bottom: 16upx;
+		}
+	}
+	.btn{
+		height: 66upx;
+		line-height: 66upx;
+		border-radius: 100upx;
+		background: $uni-color-primary;
+		font-size: $font-base + 2upx;
+		color: #fff;
+		margin: 30upx auto 20upx;
+		bottom: 10upx;
+	}
+
+/* 提示窗口 */
+	.uni-tip {
+		padding: 15px;
+		width: 300px;
+		background: #fff;
+		box-sizing: border-box;
+		border-radius: 10px;
+	}
+
+	.uni-tip-title {
+		text-align: center;
+		font-weight: bold;
+		font-size: 16px;
+		color: #333;
+	}
+
+	.uni-tip-content {
+		padding: 15px;
+		font-size: 14px;
+		color: #666;
+	}
+
+	.uni-tip-group-button {
+		margin-top: 10px;
+		display: flex;
+	}
+
+	.uni-tip-button {
+		width: 100%;
+		text-align: center;
+		font-size: 14px;
+		color: #3b4144;
+	}
+	
+	radio-group{
+	  display: flex;
+	  align-items: center;
+	  min-height: 100upx;
+	  margin-left: calc(50% - 120upx);
+	}
+	 radio-group .radio{
+	  margin-left: 20rpx;
+	}
+	 radio-group radio{
+	  margin-left: 10rpx;
+	}

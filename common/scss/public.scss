@@ -1,0 +1,148 @@
+.address-section {
+		padding: 30upx 0;
+		background: #fff;
+		position: relative;
+
+		.order-content {
+			display: flex;
+			align-items: center;
+		}
+
+		.icon-shouhuodizhi {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 90upx;
+			color: #888;
+			font-size: 44upx;
+		}
+
+		.cen {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			font-size: 28upx;
+			color: $font-color-dark;
+		}
+
+		.name {
+			font-size: 34upx;
+			margin-right: 24upx;
+		}
+
+		.address {
+			margin-top: 16upx;
+			margin-right: 20upx;
+			color: $font-color-light;
+		}
+
+		.icon-you {
+			font-size: 32upx;
+			color: $font-color-light;
+			margin-right: 30upx;
+		}
+
+		.a-bg {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			display: block;
+			width: 100%;
+			height: 5upx;
+		}
+	}
+	
+	.goods-section {
+		margin-top: 16upx;
+		background: #fff;
+		padding-bottom: 1px;
+	
+		.g-header {
+			display: flex;
+			align-items: center;
+			height: 84upx;
+			padding: 0 30upx;
+			position: relative;
+		}
+	
+		.logo {
+			display: block;
+			width: 50upx;
+			height: 50upx;
+			border-radius: 100px;
+		}
+	
+		.name {
+			font-size: 30upx;
+			color: $font-color-base;
+			margin-left: 24upx;
+		}
+	
+		.g-item {
+			display: flex;
+			margin: 20upx 30upx;
+	
+			image {
+				flex-shrink: 0;
+				display: block;
+				width: 140upx;
+				height: 140upx;
+				border-radius: 4upx;
+			}
+	
+			.right {
+				flex: 1;
+				padding-left: 24upx;
+				overflow: hidden;
+			}
+	
+			.title {
+				font-size: 28upx;
+				color: $font-color-dark;
+				font-weight: bold;
+				line-height: 30rpx;
+			}
+	
+			.spec {
+				line-height: 40rpx;
+				font-size: 28upx;
+				color: $font-color-dark;
+			}
+	
+			.price-box {
+				float: right;
+				display: flex;
+				align-items: center;
+				font-size: 32upx;
+				color: $font-color-dark;
+				padding-top: 10upx;
+	
+				.price {
+					margin-bottom: 4upx;
+				}
+				.number{
+					font-size: 26upx;
+					color: $font-color-base;
+					margin-left: 20upx;
+				}
+			}
+	
+			.step-box {
+				position: relative;
+			}
+		}
+		.pay-info{
+			.pay-name{
+				margin-left: 30upx;
+				font-size: 32upx;
+				color: rgba(102,102,102,1);
+			}
+			.pay-value{
+				margin-left: calc(100% - 400upx);
+				color: #FF0036;
+				font-size: 28upx;
+			}
+		}
+		
+	}
