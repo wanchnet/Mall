@@ -27,9 +27,9 @@
 
 #### 项目截图
 
-<img src="https://readme-picture.oss-cn-qingdao.aliyuncs.com/cutpicture/Screenshot_2020-06-17-22-37-11-364_io.dcloud.HBui.jpg?Expires=1592494625&OSSAccessKeyId=TMP.3KjGs3g1w291SsE6HUdRujM3jVzzjNvRahKS56biHmFy3rG2fGZeGf2n1CfBCuYZ5vvKjx1M375NNp55cDZBNMD6nP3Ltu&Signature=vkA8NTw02zjyAvavNgczlsXu8%2FI%3D" style="zoom:20%;" /><img src="https://readme-picture.oss-cn-qingdao.aliyuncs.com/cutpicture/Screenshot_2020-06-17-22-37-16-442_io.dcloud.HBui.jpg?Expires=1592494781&OSSAccessKeyId=TMP.3KfUgNzgY16J8peigcTQLatrVsNhog5aJqLT6xo4wbcvtfGsgxjxJXkexowXwSbwVYETou49QSur5XNDi8Syr55m8B934A&Signature=funA683ow%2BYjI31r6FCbBLlcFaU%3D" style="zoom:20%;" /><img src="https://readme-picture.oss-cn-qingdao.aliyuncs.com/cutpicture/Screenshot_2020-06-17-22-37-22-617_io.dcloud.HBui.jpg?Expires=1592494797&OSSAccessKeyId=TMP.3KfUgNzgY16J8peigcTQLatrVsNhog5aJqLT6xo4wbcvtfGsgxjxJXkexowXwSbwVYETou49QSur5XNDi8Syr55m8B934A&Signature=5S2PIwPrLVnF3riwrr%2BnokEEZbQ%3D" style="zoom:20%;" /><img src="https://readme-picture.oss-cn-qingdao.aliyuncs.com/cutpicture/Screenshot_2020-06-17-22-37-36-396_io.dcloud.HBui.jpg?Expires=1592494818&OSSAccessKeyId=TMP.3KfUgNzgY16J8peigcTQLatrVsNhog5aJqLT6xo4wbcvtfGsgxjxJXkexowXwSbwVYETou49QSur5XNDi8Syr55m8B934A&Signature=bJ6nvkRRGMLPPvFdYZTYHs1hqzE%3D" style="zoom:20%;" />
+<img src="https://github.com/wanchnet/picture/blob/master/cut/detail.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/blob/master/cut/fenlei.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/blob/master/cut/index.jpg" style="zoom:20%;" /><img src="hhttps://github.com/wanchnet/picture/blob/master/cut/index1.jpg" style="zoom:20%;" />
 
-<img src="https://readme-picture.oss-cn-qingdao.aliyuncs.com/cutpicture/Screenshot_2020-06-17-22-37-44-062_io.dcloud.HBui.jpg?Expires=1592494840&OSSAccessKeyId=TMP.3KfUgNzgY16J8peigcTQLatrVsNhog5aJqLT6xo4wbcvtfGsgxjxJXkexowXwSbwVYETou49QSur5XNDi8Syr55m8B934A&Signature=qMaIErKGPw5gllk08ass4REZgH0%3D" style="zoom:20%;" /><img src="https://readme-picture.oss-cn-qingdao.aliyuncs.com/cutpicture/Screenshot_2020-06-17-22-37-57-000_io.dcloud.HBui.jpg?Expires=1592494855&OSSAccessKeyId=TMP.3KfUgNzgY16J8peigcTQLatrVsNhog5aJqLT6xo4wbcvtfGsgxjxJXkexowXwSbwVYETou49QSur5XNDi8Syr55m8B934A&Signature=1RDabued%2Fv7ehHPrsScA%2FfB8WL8%3D" style="zoom:20%;" /><img src="https://readme-picture.oss-cn-qingdao.aliyuncs.com/cutpicture/Screenshot_2020-06-17-22-39-09-532_io.dcloud.HBui.jpg?Expires=1592494869&OSSAccessKeyId=TMP.3KfUgNzgY16J8peigcTQLatrVsNhog5aJqLT6xo4wbcvtfGsgxjxJXkexowXwSbwVYETou49QSur5XNDi8Syr55m8B934A&Signature=UCeVrRiZJZIZQ%2Fgev%2FVBcRc1lqI%3D" style="zoom:20%;" /><img src="https://readme-picture.oss-cn-qingdao.aliyuncs.com/cutpicture/Screenshot_2020-06-17-22-39-38-174_io.dcloud.HBui.jpg?Expires=1592494885&OSSAccessKeyId=TMP.3KfUgNzgY16J8peigcTQLatrVsNhog5aJqLT6xo4wbcvtfGsgxjxJXkexowXwSbwVYETou49QSur5XNDi8Syr55m8B934A&Signature=87J5MzuwA9SwEcgFh3%2F06ZwlRBA%3D" style="zoom:20%;" />
+<img src="https://github.com/wanchnet/picture/blob/master/cut/info.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/blob/master/cut/login.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/blob/master/cut/person.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/blob/master/cut/regiest.jpg" style="zoom:20%;" />
 
 
 
@@ -39,7 +39,7 @@
 
 |                 QQ群                 |                   微信                   |
 | :----------------------------------: | :--------------------------------------: |
-| ![](C:\Users\10906\Downloads\qq.png) | ![](C:\Users\10906\Downloads\wechat.png) |
+| ![](https://github.com/wanchnet/picture/blob/master/qrcode/qq.png) | ![](https://github.com/wanchnet/picture/blob/master/qrcode/wechat.png) |
 
 如果您觉得有帮助，请点右上角 "Star" 支持一下谢谢
 
