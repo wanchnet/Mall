@@ -28,9 +28,9 @@
 
 #### 项目截图
 
-<img src="https://github.com/wanchnet/picture/blob/master/cut/detail.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/blob/master/cut/fenlei.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/blob/master/cut/index.jpg" style="zoom:20%;" /><img src="hhttps://github.com/wanchnet/picture/blob/master/cut/index1.jpg" style="zoom:20%;" />
+<img src="https://github.com/wanchnet/picture/raw/master/cut/detail.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/raw/master/cut/fenlei.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/raw/master/cut/index.jpg" style="zoom:20%;" /><img src="hhttps://github.com/wanchnet/picture/raw/master/cut/index1.jpg" style="zoom:20%;" />
 
-<img src="https://github.com/wanchnet/picture/blob/master/cut/info.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/blob/master/cut/login.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/blob/master/cut/person.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/blob/master/cut/regiest.jpg" style="zoom:20%;" />
+<img src="https://github.com/wanchnet/picture/raw/master/cut/info.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/raw/master/cut/login.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/raw/master/cut/person.jpg" style="zoom:20%;" /><img src="https://github.com/wanchnet/picture/raw/master/cut/regiest.jpg" style="zoom:20%;" />
 
 
 
@@ -40,7 +40,7 @@
 
 |                       QQ群：235825022                        |                     微信：jiangyouwe1955                     |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| ![](https://github.com/wanchnet/picture/blob/master/qrcode/qq.png) | ![](https://github.com/wanchnet/picture/blob/master/qrcode/wechat.png) |
+| ![](https://github.com/wanchnet/picture/raw/master/qrcode/qq.png) | ![](https://github.com/wanchnet/picture/raw/master/qrcode/wechat.png) |
 
 如果您觉得有帮助，请点右上角 "Star" 支持一下谢谢
 
