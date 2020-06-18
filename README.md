@@ -11,11 +11,12 @@
 
 1.  本项目开源的目的是让每个人轻松搭建自己的商城，轻松上手，但是您还是有一些必要的环境准备，在运行本项目之前，您必须完成以下的步骤。
 2.  环境要求：为了避免运行开发中遇到一些意想不到的问题，我们推荐你安装如下环境。Git Node9+ hbuilderX 微信开发者工具
+3.  本项目后台为有偿开源，详情咨询微信：jiangyouwe1955
 
 #### 安装教程
 
 1.  克隆本项目到本地<br> 
-    `git clone https://gitee.com/wanchnet/Mall.git`
+    `git clone https://github.com/wanchnet/Mall.git`
 2.  配置hbuilderX<br>
     该项目推荐使用hbuilderX调试编写，在使用之前请进行必要的配置：node和微信开发者工具。
 3.  开始使用<br>
