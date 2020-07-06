@@ -52,7 +52,7 @@
 							<image class="goods-img" :src="encodeURI(goodsItem.productPic)" mode="aspectFill"></image>
 							<view class="right">
 								<text class="title clamp">{{goodsItem.productName}}</text>
-								<text class="attr-box">{{goodsItem.sp1}} {{goodsItem.sp2|isEmpty}} x {{goodsItem.productQuantity}}</text>
+								<text class="attr-box">{{goodsItem.attr}}  x {{goodsItem.productQuantity}}</text>
 								<text class="price">{{goodsItem.productPrice}}</text>
 							</view>
 						</view>
@@ -271,6 +271,15 @@
 				// 	return item
 				// });
 				result.list.forEach(item=>{
+					item.items.forEach(product =>{
+						if(product.productAttr){
+							let attr = JSON.parse(product.productAttr)
+							product.attr = ''
+							for(var i =0;i<attr.length;i++){
+								product.attr += attr[i].value+" "
+							}
+						}
+					})
 					item = Object.assign(item, this.orderStateExp(item.omsOrder.status));
 					navItem.orderList.push(item);
 				})

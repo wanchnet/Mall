@@ -1,0 +1,149 @@
+.content{
+	.svg-icon{
+		margin-top: 25rpx;
+		width: 30rpx;
+		height: 30rpx;
+	}
+	.first{
+		margin-left: 12%;
+		padding-top: 100rpx;
+		.lo-text{
+			display: block;
+			padding-left: 20rpx;
+			font-size: 56rpx;
+			font-weight: bold;
+		}
+		.lo-color{
+			width: 160rpx;
+			height: 32rpx;
+			background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+			margin-top: -28rpx;
+		}
+		.re-text{
+			display: block;
+			padding-top: 20rpx;
+			font-size: 24rpx;
+			.zc{
+				color: rgba(249, 117, 143, 1);
+			}
+		}
+	}
+	.second{
+		padding-top: 150rpx;
+		.phone{
+			margin-top: 36rpx;
+			margin-left: 12%;
+			height: 80rpx;
+			width: 76%;
+			border-radius: 80rpx;
+			border: 3rpx solid rgba(249, 117, 143, 1);
+			.image{
+				float: left;
+				width: 15%;
+				height: 80rpx;
+				text-align: center;
+				.svg-icon{
+					margin-top: 25rpx;
+					width: 30rpx;
+					height: 30rpx;
+				}
+			}
+			.phone-input{
+				height: 100%;
+				.phone-input{
+					padding-top: calc(50% - 20rpx);
+				}
+			}
+		}
+		.yzm{
+			margin-top: 36rpx;
+			margin-left: 12%;
+			height: 80rpx;
+			width: 76%;
+			.yzm-left{
+				float: left;
+				height: 80rpx;
+				width: 68%;
+				border-radius: 80rpx 0 0 80rpx;
+				border: 3rpx solid rgba(249, 117, 143, 1);
+				.image{
+					float: left;
+					width: 22%;
+					height: 100%;
+					text-align: center;
+					.svg-icon{
+						margin-top: 25rpx;
+						width: 30rpx;
+						height: 30rpx;
+					}
+				}
+				.yzm-input{
+					float: left;
+					height: 100%;
+				}
+			}
+			.yzm-right{
+				float: right;
+				height: 80rpx;
+				width: 30%;
+				border-radius: 0 80rpx 80rpx 0;
+				border: 3rpx solid rgba(249, 117, 143, 1);
+				text-align: center;
+				.yzm-img{
+					width: 100%;
+					height: 100%;
+					border-radius: 0 80rpx 80rpx 0;
+					.svg-icon{
+						margin-top: 25rpx;
+						width: 30rpx;
+						height: 30rpx;
+					}
+				}
+				.yzm-text{
+					line-height: 80rpx;
+					font-size: 26rpx;
+				}
+			}
+		}
+		.submit{
+			margin-top: 140rpx;
+			margin-left: 12%;
+			height: 80rpx;
+			width: 76%;
+			border-radius: 80rpx;
+			background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+			text-align: center;
+			.submit-text{
+				line-height: 80rpx;
+				color: #FFFFFF;
+				font-weight: bold;
+			}
+		}
+		.forget-psd{
+			padding-top: 16rpx;
+			text-align: center;
+			.forget-text{
+				font-size: 14px;
+			}
+		}
+		.wechat{
+			padding-top: 100rpx;
+			text-align: center;
+			font-size: 24rpx;
+			.wechat-text{
+				.line{
+					color: rgba(249, 117, 143, 1);
+				}
+			}
+			.wechat-img{
+				padding-top: 40rpx;
+				.img{
+					width: 72rpx;
+					height: 72rpx;
+				}
+			}
+
+		}
+	}
+	
+}

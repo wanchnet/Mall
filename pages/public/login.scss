@@ -38,7 +38,9 @@
 				height: 100%;
 				text-align: center;
 				.svg-icon{
-					padding-top: 20rpx;
+					margin-top: 25rpx;
+					width: 30rpx;
+					height: 30rpx;
 				}
 			}
 			.phone-input{
@@ -65,7 +67,9 @@
 					height: 100%;
 					text-align: center;
 					.svg-icon{
-						padding-top: 20rpx;
+						margin-top: 25rpx;
+						width: 30rpx;
+						height: 30rpx;
 					}
 				}
 				.yzm-input{
@@ -83,6 +87,11 @@
 					width: 100%;
 					height: 100%;
 					border-radius: 0 80rpx 80rpx 0;
+					.svg-icon{
+						margin-top: 25rpx;
+						width: 30rpx;
+						height: 30rpx;
+					}
 				}
 			}
 		}
@@ -117,7 +126,9 @@
 				}
 			}
 			.wechat-img{
-				padding-top: 40rpx;
+				margin-top: 40rpx;
+				width: 72px;
+				background-color: white;
 				.img{
 					width: 72rpx;
 					height: 72rpx;
@@ -126,5 +137,7 @@
 
 		}
 	}
-	
+	.wechat-img::after {
+	border: none;
+	}
 }

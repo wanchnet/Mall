@@ -1,3 +1,4 @@
+@import 'uview-ui/theme.scss';
 
 /* 页面左右间距 */
 $page-row-spacing: 30upx;
@@ -22,10 +23,11 @@ $border-color-light: #EBEEF5;
 /* 图片加载中颜色 */
 $image-bg-color: #eee;
 /* 行为相关颜色 */
-$uni-color-primary:#fa436a;
+$uni-color-primary:#fa3534;
 $uni-color-success: #4cd964;
 $uni-color-warning: #f0ad4e;
 $uni-color-error: #dd524d;
+
 
 .wscnph{
 		width: 100% !important;

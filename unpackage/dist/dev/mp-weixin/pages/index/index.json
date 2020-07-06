@@ -1,0 +1,11 @@
+{
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "u-notice-bar": "/uview-ui/components/u-notice-bar/u-notice-bar",
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper",
+    "u-waterfall": "/uview-ui/components/u-waterfall/u-waterfall",
+    "index-u-waterfall-left": "/pages/index/index-u-waterfall-left",
+    "index-u-waterfall-right": "/pages/index/index-u-waterfall-right"
+  }
+}

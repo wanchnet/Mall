@@ -3,7 +3,7 @@
 		<view class="goods-section">
 			<!-- <view class="g-header b-b">
 				<image class="logo" src="http://duoduo.qibukj.cn/./Upload/Images/20190321/201903211727515.png"></image>
-				<text class="name">桃花潭商城</text>
+				<text class="name">星淘商城</text>
 			</view> -->
 			<!-- 商品列表 -->
 			<view class="g-item" v-for="(item, index) in orderInfo.items" :key="index">

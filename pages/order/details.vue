@@ -39,14 +39,14 @@
 		<view class="goods-section">
 			<view class="g-header b-b">
 				<image class="logo" src="http://duoduo.qibukj.cn/./Upload/Images/20190321/201903211727515.png"></image>
-				<text class="name">桃花潭商城</text>
+				<text class="name">万诚小店</text>
 			</view>
 			<!-- 商品列表 -->
 			<view class="g-item" v-for="(item, index) in orderInfo.items" :key="index">
 				<image :src="encodeURI(item.productPic)"></image>
 				<view class="right">
 					<text class="title clamp">{{item.productName}}</text>
-					<text class="spec">{{item.sp1}} {{item.sp2|isEmpty}}</text>
+					<text class="spec">{{item.attr}} </text>
 					<view class="price-box">
 						<text class="price">￥{{item.productPrice}}</text>
 						<text class="number">x {{item.productQuantity}}</text>
@@ -138,6 +138,13 @@
 					var result=res.data;
 					if(result.code === 200){
 						_self.orderInfo = result.data
+						_self.orderInfo.items.forEach(item =>{
+							let attr = JSON.parse(item.productAttr)
+							item.attr = ''
+							for(var i =0;i<attr.length;i++){
+								item.attr += attr[i].value+" "
+							}
+						})
 					}else{
 						_self.$api.msg("订单信息获取失败，请重试")
 					}

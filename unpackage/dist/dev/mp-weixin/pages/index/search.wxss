@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+.wscnph {
+  width: 100% !important;
+}
+.content .bangs {
+  height: 25px;
+}
+.content .search-row {
+  position: relative;
+}
+.content .search-row .input-group {
+  position: relative;
+  height: 70rpx;
+  width: calc(100% - 100rpx);
+  background-color: #f7f7f7;
+  border-radius: 28rpx;
+}
+.content .search-row .input-group .search-icon {
+  width: 70rpx;
+}
+.content .search-row .input-group .search-icon .search-img {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.content .search-row .input-group .search-input {
+  position: relative;
+  width: calc(100% - 70rpx);
+}
+.content .search-row .input-group .search-input input {
+  line-height: 70rpx;
+  height: 70rpx;
+}
+.content .search-row .opt {
+  width: 100rpx;
+  line-height: 70rpx;
+}
+.content .hostory {
+  padding: 30rpx 28rpx;
+}
+.content .hostory .title {
+  height: 70rpx;
+  font-weight: bold;
+}
+.content .hostory .title .detele {
+  float: right;
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: 20rpx;
+}
+.content .hostory .list-keyword .keyword {
+  background-color: #f7f7f7;
+  min-width: 80rpx;
+  height: 60rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  float: left;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.content .keywords {
+  margin-top: 80rpx;
+}
+.content .keywords .title {
+  height: 50rpx;
+  margin-bottom: 30rpx;
+}
+.content .keywords .list-keyword .keyword {
+  background-color: #f2a5a5;
+  color: #FFFFFF;
+  height: 40rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 5rpx;
+  float: left;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  font-size: 20rpx;
+}
+

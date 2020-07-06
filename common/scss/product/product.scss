@@ -29,6 +29,102 @@ page{
 		}
 		
 	}
+	.detail-text{
+		// background-color: #FFFFFF;
+		padding: 20rpx 0 20rpx 0;
+		.spike{
+			height: 100rpx;
+			width: 96%;
+			margin-left: 2%;
+			background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+			border-radius: 15rpx;
+			padding-left: 20rpx;
+			.price-tip{
+				float: left;
+				font-size: 36rpx;
+				font-weight: bold;
+				line-height: 70rpx;
+				margin-top: 20rpx;
+				color: #FFFFFF;
+			}
+			.price{
+				float: left;
+				font-size: 56rpx;
+				font-weight: bold;
+				line-height: 100rpx;
+				color: #FFFFFF;
+			}
+			.m-price{
+				margin:0 12upx;
+				color: $font-color-light;
+				text-decoration: line-through;
+				line-height: 50rpx;
+				margin-bottom: 70rpx;
+				color: #FFFFFF;
+			}
+		}
+		.no-spike{
+			height: 100rpx;
+			width: 96%;
+			margin-left: 2%;
+			border-radius: 15rpx;
+			padding-left: 20rpx;
+			.price-tip{
+				float: left;
+				font-size: 36rpx;
+				font-weight: bold;
+				line-height: 70rpx;
+				margin-top: 20rpx;
+				color: #aa0000;
+			}
+			.price{
+				float: left;
+				font-size: 56rpx;
+				font-weight: bold;
+				line-height: 100rpx;
+				color: #aa0000;
+			}
+			.m-price{
+				margin:0 12upx;
+				color: $font-color-light;
+				text-decoration: line-through;
+				line-height: 50rpx;
+				margin-bottom: 70rpx;
+				color: #aa0000;
+			}
+		}
+		.product-info{
+			padding: 20rpx 30rpx;
+			.coupon-tip{
+				padding-right: 5rpx;
+				height: 120rpx;
+				text-align: center;
+				background: #ED1C24;
+				font-size: 20rpx;
+				color: #fff;
+				border-radius: 6upx;
+			}
+			.title{
+				padding-left: 10rpx;
+				font-size: 28rpx;
+				font-weight: bold;
+				color: $font-color-dark;
+				line-height: 60upx;
+			}
+		}
+		.bot-row{
+			padding-left: 30rpx;
+			.bot-text{
+				padding-right: 50rpx;
+				align-items:center;
+				height: 50upx;
+				font-size: $font-sm;
+				color: $font-color-light;
+			}
+
+		}
+	}
+	
 	
 	/* 标题简介 */
 	.introduce-section{
@@ -677,17 +773,17 @@ page{
 	/* 底部操作菜单 */
 	.page-bottom{
 		position:fixed;
-		left: 30upx;
-		bottom:30upx;
+		// left: 30upx;
+		bottom:0upx;
 		z-index: 95;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 690upx;
+		width: 100%;
 		height: 100upx;
 		background: rgba(255,255,255,.9);
 		box-shadow: 0 0 20upx 0 rgba(0,0,0,.5);
-		border-radius: 16upx;
+		// border-radius: 16upx;
 		
 		
 		.p-b-btn{

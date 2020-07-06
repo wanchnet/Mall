@@ -10,6 +10,7 @@
 2.  环境要求：为了避免运行开发中遇到一些意想不到的问题，我们推荐你安装如下环境。Git Node9+ hbuilderX 微信开发者工具
 3.  **本项目后台为有偿开源，详情咨询微信：jiangyouwe1955**
 4.  **后台演示地址：账户 admin  密码 123456  http://dist.wanchnet.com/#/home** 
+5.  **本项目基于mall及colorui**
 
 #### 安装教程
 

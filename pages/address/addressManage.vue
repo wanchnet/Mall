@@ -72,7 +72,7 @@
 				uni.chooseLocation({
 					success: (data)=> {
 						console.log(JSON.stringify(data))
-						// #ifdef  H5
+						//#ifndef APP-PLUS
 						Api.methods.addressResolution(data).then(function(res){
 							var list=res.data.data;
 							if(list.length>0){
@@ -103,6 +103,7 @@
 							// _self.addressData.region=data.address;
 							// _self.addressData.detailAddress=data.name;
 						//#endif
+						
 					}
 				})
 			},
@@ -115,7 +116,8 @@
 					this.$api.msg('请填写收货人姓名');
 					return;
 				}
-				if(!/(^1[3|4|5|7|8][0-9]{9}$)/.test(data.phoneNumber)){
+				// if(!/(^1[3|4|5|7|8][0-9]{9}$)/.test(data.phoneNumber)){
+				if(!/^1(3|4|5|6|7|8|9)\d{9}$/.test(data.phoneNumber)){
 					this.$api.msg('请输入正确的手机号码');
 					return;
 				}

@@ -1,25 +1,29 @@
 <template>  
     <view class="container">  
-		
 		<view class="user-section">
 			<!-- <image class="bg" src="/static/user-bg.jpg"></image> -->
 			<view class="bg"></view>
 			<view class="user-info-box">
-				<view class="portrait-box">
-					<image class="portrait" :src="userInfo.portrait || '/static/missing-face.png'"></image>
+				<view class="portrait-box" @click="navTo('/pages/userinfo/userinfo-new')">
+					<image class="portrait" :src="userInfo.portrait || '/static/icon/face.png'"></image>
 				</view>
-				<view class="info-box">
-					<text class="username">{{userInfo.nickname || '游客'}}</text>
+				<view class="info-box" @click="navTo('/pages/userinfo/userinfo-new')">
+					<text class="username" style="font-weight: bold; color: #FFFFFF;">{{userInfo.nickname || '游客'}}</text>
 				</view>
+				<!-- #ifndef MP -->
+				<view style="width: 45rpx; height: 45rpx; margin-top: 25rpx; float: right;">
+					<image style="width: 35rpx; height: 35rpx;" src="../../static/icon/customer.png" @click="msg()" mode="aspectFill"></image>
+				</view>
+				<!-- #endif -->
 			</view>
 			<view class="vip-card-box">
-				<image class="card-bg" src="/static/vip-card-bg.png" mode=""></image>
+				<image class="card-bg" src="/static/icon/member.png" mode="aspectFill"></image>
 				<!-- <view class="b-btn">
 					立即开通
 				</view> -->
 				<view class="tit">
 					<text class="yticon icon-iLinkapp-"></text>
-					星淘优选会员
+					优选会员
 				</view>
 				<!-- <text class="e-m">DCloud Union</text>
 				<text class="e-b">开通会员开发无bug 一测就上线</text> -->
@@ -36,11 +40,11 @@
 			@touchmove="coverTouchmove"
 			@touchend="coverTouchend"
 		>
-			<image class="arc" src="/static/arc.png"></image>
+			<!-- <image class="arc" src="/static/arc.png"></image> -->
 			
 			<view class="tj-sction">
 				<view class="tj-item">
-					<text class="num">{{userInfo.balance2}}</text>
+					<text class="num">{{userInfo.balance2 || '0'}}</text>
 					<text>余额</text>
 				</view>
 				<!-- <view class="tj-item">
@@ -48,7 +52,7 @@
 					<text>优惠券</text>
 				</view> -->
 				<view class="tj-item">
-					<text class="num">{{userInfo.integration}}</text>
+					<text class="num">{{userInfo.integration || '0'}}</text>
 					<text>积分</text>
 				</view>
 			</view>
@@ -78,37 +82,32 @@
 				</view> -->
 			</view>
 			<!-- 浏览历史 -->
-			<view class="history-section icon">
-				<!-- <view class="sec-header">
-					<text class="yticon icon-lishijilu"></text>
-					<text>浏览历史</text>
-				</view>
-				<scroll-view scroll-x class="h-list">
-					<image @click="navTo('/pages/product/product')" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553105186633&di=c121a29beece4e14269948d990f9e720&imgtype=0&src=http%3A%2F%2Fimg004.hc360.cn%2Fm8%2FM04%2FDE%2FDE%2FwKhQplZ-QteEBvsbAAAAADUkobU751.jpg" mode="aspectFill"></image>
-					<image @click="navTo('/pages/product/product')" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553105231218&di=09534b9833b5243296630e6d5b728eff&imgtype=0&src=http%3A%2F%2Fimg002.hc360.cn%2Fm1%2FM05%2FD1%2FAC%2FwKhQcFQ3iN2EQTo8AAAAAHQU6_8355.jpg" mode="aspectFill"></image>
-					<image @click="navTo('/pages/product/product')" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553105320890&di=c743386be51f2c4c0fd4b75754d14f3c&imgtype=0&src=http%3A%2F%2Fimg007.hc360.cn%2Fhb%2FMTQ1OTg4ODY0MDA3Ny05OTQ4ODY1NDQ%3D.jpg" mode="aspectFill"></image>
-					<image @click="navTo('/pages/product/product')" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2691146630,2165926318&fm=26&gp=0.jpg" mode="aspectFill"></image>
-					<image @click="navTo('/pages/product/product')" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1553105443324&di=8141bf13f3f208c61524d67f9bb83942&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01ac9a5548d29b0000019ae98e6d98.jpg" mode="aspectFill"></image>
-					<image @click="navTo('/pages/product/product')" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=191678693,2701202375&fm=26&gp=0.jpg" mode="aspectFill"></image>
-				</scroll-view> -->
+			<u-cell-group style="margin-top: 30rpx;">
+				<u-cell-item icon="rmb-circle-fill" iconSize="38" iconColor="#9789f7" title="充值卡充值" @click="navTo('/pages/money/recharge/recharge')"></u-cell-item>
+				<u-cell-item icon="account-fill" iconSize="38" iconColor="#fa3534" title="个人信息" @click="navTo('/pages/userinfo/userinfo-new')"></u-cell-item>
+				<u-cell-item icon="lock-fill" iconSize="38" iconColor="#ee883b" title="修改密码" @click="navTo('/pages/userinfo/modifypwd')"></u-cell-item>
+				<u-cell-item icon="pushpin-fill" iconSize="38" iconColor="#54b4ef" title="地址管理" @click="navTo('/pages/address/address')"></u-cell-item>
+				<u-cell-item icon="phone-fill" iconSize="38" iconColor="#5fcda2" title="联系我们" @click="togglePopup('center', 'image')"></u-cell-item>
+			</u-cell-group>
+		<!-- 	<view class="history-section icon">
 				<list-cell icon="icon-iconfontweixin" iconColor="#e07472" title="充值卡充值" @eventClick="navTo('/pages/money/recharge/recharge')"></list-cell>
 				<list-cell icon="icon-icon_signal" iconColor="#e07472" title="个人信息" @eventClick="navTo('/pages/userinfo/userinfo-new')"></list-cell>
-				<list-cell icon="icon-shezhi1" iconColor="#e07472" title="修改密码" border="" @eventClick="navTo('/pages/userinfo/modifypwd')"></list-cell>
-				<list-cell icon="icon-dizhi" iconColor="#5fcda2" title="地址管理" @eventClick="navTo('/pages/address/address')"></list-cell>
+				<list-cell icon="icon-shezhi1" iconColor="#e07472" title="修改密码" @eventClick="navTo('/pages/userinfo/modifypwd')"></list-cell>
+				<list-cell icon="icon-dizhi" iconColor="#5fcda2" title="地址管理" @eventClick="navTo('/pages/address/address')"></list-cell> -->
 				<!-- <list-cell icon="icon-share" iconColor="#9789f7" title="分享" tips=""></list-cell> -->
 				<!-- <list-cell icon="icon-pinglun-copy" iconColor="#ee883b" title="晒单" tips="晒单抢红包"></list-cell> -->
 				<!-- <list-cell icon="icon-shoucang_xuanzhongzhuangtai" iconColor="#54b4ef" title="我的收藏"></list-cell> -->
-				<list-cell icon="icon-xunjia" iconColor="#54b4ef" title="联系我们" @eventClick="togglePopup('center', 'image')"></list-cell>
+<!-- 				<list-cell icon="icon-xunjia" iconColor="#54b4ef" title="联系我们" @eventClick="togglePopup('center', 'image')"></list-cell>
 				
-			</view>
+			</view> -->
 			
 			
 			<view v-if="userInfo.nickname" class="list-cell log-out-btn" @click="toLogout">
-				<text class="cell-tit">退出登陆</text>
+				<text class="cell-tit">退出登录</text>
 			</view>
 			
 			<view v-if="! userInfo.nickname" class="list-cell log-out-btn" @click="navTo">
-				<text class="cell-tit">去登陆</text>
+				<text class="cell-tit">去登录</text>
 			</view>
 		</view>
 			
@@ -211,6 +210,9 @@
 			 change(e) {
 			 	(e.show)
 			 },
+			msg(){
+				this.$api.msg('客服系统暂未开发，请移步我的-联系我们');
+			},
 			loadUserInfo(){
 				var _self=this
 				Api.methods.loadUserInfo().then(function(res){

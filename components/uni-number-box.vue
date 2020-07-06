@@ -10,7 +10,6 @@
 			type="number" 
 			:disabled="disabled"
 			:value="inputValue" 
-			
 			@blur="_onBlur"
 		>
 		<view 
@@ -144,15 +143,16 @@
 </script>
 <style>
 	.uni-numbox {
-		position:absolute;
+		/* position:absolute; */
 		left: 30upx;
 		bottom: 0;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		width:230upx;
-		height: 70upx;
+		width:130upx;
+		height: 40upx;
 		background:#f5f5f5;
+		border-radius: 40rpx;
 	}
 
 	.uni-numbox-minus,
@@ -161,13 +161,13 @@
 		background-color: #f5f5f5;
 		width: 70upx;
 		height: 100%;
-		line-height: 70upx;
+		line-height: 40upx;
 		text-align: center;
 		position: relative;
 	}
 	.uni-numbox-minus .yticon,
 	.uni-numbox-plus .yticon{
-		font-size: 36upx;
+		font-size: 25upx;
 		color: #555;
 	}
 
@@ -187,10 +187,11 @@
 		position: relative;
 		background-color: #f5f5f5;
 		width: 90upx;
-		height: 50upx;
+		height: 40upx;
 		text-align: center;
 		padding: 0;
-		font-size: 30upx;
+		font-size: 25upx;
+		font-weight: bold;
 	}
 
 	.uni-numbox-disabled.yticon {

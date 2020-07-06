@@ -1,44 +1,28 @@
 {
+	"easycom": {
+			"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+		},
 	"pages": [
-
 		{
 			"path": "pages/index/index",
 			"style": {
 				// #ifdef MP 
-				"navigationBarTitleText": "桃花潭商城",
-				//"navigationStyle": "custom",
+				// "navigationBarTitleText": "万诚小店",
+				"navigationStyle": "custom",
 				// #endif 
 				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": {
 						"type": "transparent",
 						"searchInput": {
-							"backgroundColor": "rgba(231, 231, 231,.7)",
+							"backgroundColor": "#f7f7f7",
 							"borderRadius": "16px",
-							"placeholder": "请输入商品名称 如：iphone X",
+							"placeholder": "请输入商品名称",
 							"disabled": true,
 							"placeholderColor": "#606266"
-						},
-						"buttons": [
-							// {
-							// 	"fontSrc": "/static/yticon.ttf",
-							// 	"text": "\ue60d",
-							// 	"fontSize": "26",
-							// 	"color": "#303133",
-							// 	"float": "left",
-							// 	"background": "rgba(0,0,0,0)"
-							// },
-							{
-								"fontSrc": "/static/yticon.ttf",
-								"text": "\ue744",
-								"fontSize": "27",
-								"color": "#303133",
-								"background": "rgba(0,0,0,0)",
-								"redDot": true
-							}
-						]
+						}
 					}
-				}
+				} 
 			}
 		},
 		{
@@ -102,27 +86,8 @@
 				"navigationStyle": "custom",
 				// #endif
 				"app-plus": {
-					"bounce": "none",
 					"titleNView": {
-						"type": "transparent",
-						"buttons": [
-							// {
-							// 	"fontSrc": "/static/yticon.ttf",
-							// 	"text": "\ue60f",
-							// 	"fontSize": "24",
-							// 	"color": "#303133",
-							// 	"width": "46px",
-							// 	"background": "rgba(0,0,0,0)"
-							// },
-							{
-								"fontSrc": "/static/yticon.ttf",
-								"text": "\ue744",
-								"fontSize": "28",
-								"color": "#303133",
-								"background": "rgba(0,0,0,0)",
-								"redDot": true
-							}
-						]
+						"type": "transparent"
 					}
 				}
 			}
@@ -235,19 +200,9 @@
         }
         ,{
             "path" : "pages/userinfo/userinfo-new",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/public/login",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/public/register1",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/public/findpwd1",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "个人信息"
+			}
         }
     ],
 	"globalStyle": {
@@ -258,7 +213,7 @@
 	},
 	"tabBar": {
 		"color": "#C0C4CC",
-		"selectedColor": "#fa436a",
+		"selectedColor": "#ff0844",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"list": [{

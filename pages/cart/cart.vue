@@ -2,24 +2,20 @@
 	<view class="container">
 		<!-- 空白页 -->
 		<view v-if="!hasLogin || empty===true" class="empty">
-			<image src="/static/emptyCart.jpg" mode="aspectFit"></image>
+			<!-- <image src="/static/emptyCart.jpg" mode="aspectFit"></image> -->
+			<u-empty mode="car" text="空空如也" style="height: auto;"></u-empty>
 			<view v-if="hasLogin" class="empty-tips">
-				空空如也
 				<navigator class="navigator" v-if="hasLogin" url="../index/index" open-type="switchTab">随便逛逛></navigator>
 			</view>
 			<view v-else class="empty-tips">
-				空空如也
-				<view class="navigator" @click="navToLogin">去登陆></view>
+				<view class="navigator" @click="navToLogin" style="font-weight: bold;">去登录></view>
 			</view>
 		</view>
 		<view v-else>
 			<!-- 列表 -->
 			<view class="cart-list">
 				<block v-for="(item, index) in cartList" :key="item.id">
-					<view
-						class="cart-item" 
-						:class="{'b-b': index!==cartList.length-1}"
-					>
+					<view class="cart-item" :class="{'b-b': index!==cartList.length-1}">
 						<view class="image-wrapper">
 							<image :src="encodeURI(item.productPic)" 
 								:class="['loaded']"
@@ -36,10 +32,39 @@
 						</view>
 						<view class="item-right">
 							<text class="clamp title">{{item.productName}}</text>
-							<text class="attr">{{item.sp1}} {{item.sp2}}</text>
-							<text class="price">¥{{item.price}}</text>
+							<text class="attr">{{item.attr}}</text>
+							<view class="price-num">
+								<u-row>
+									<u-col span="7">
+										<text class="price" style="color:#fa3534;font-weight: bold;">¥{{item.price}}</text>
+									</u-col>
+									<u-col span="5">
+										<u-number-box 
+										:input-width="50" 
+										:input-height="40"
+										:min="1"
+										:value="item.quantity"
+										:index="index"
+										@change="numberChange"
+										:size="20"
+										:disabledInput="true"
+										></u-number-box>
+										<!-- <uni-number-box
+											:min="1" 
+											:max="item.stock"
+											:value="item.quantity>item.stock?item.stock:item.quantity"
+											:isMax="item.quantity>=item.stock?true:false"
+											:isMin="item.quantity===1"
+											:index="index"
+											@eventChange="numberChange"
+										></uni-number-box> -->
+									</u-col>
+								</u-row>
+							</view>
+							<!-- <text class="price">¥{{item.price}}</text>
 							<uni-number-box 
 								class="step"
+								style="width: 120rpx;height: 32rpx;"
 								:min="1" 
 								:max="item.stock"
 								:value="item.quantity>item.stock?item.stock:item.quantity"
@@ -47,34 +72,61 @@
 								:isMin="item.quantity===1"
 								:index="index"
 								@eventChange="numberChange"
-							></uni-number-box>
+							></uni-number-box> -->
 						</view>
 						<text class="del-btn yticon icon-fork" @click="deleteCartItem(index)"></text>
 					</view>
 				</block>
 			</view>
 			<!-- 底部菜单栏 -->
-			<view class="action-section">
+			<view class="bottom-bar">
+				<u-row>
+					<u-col span="4">
+						<image class="check-img"
+							:src="allChecked?'/static/selected.png':'/static/select.png'" 
+							mode="aspectFit"
+							@click="check('all')"
+						></image>
+						<view class="check-text">
+							<text>全选</text>
+						</view>
+					</u-col>
+					<u-col span="4">
+						<text class="price" style="line-height: 100rpx;">
+							合计：
+							<text style="color: #fa3534;font-size: 30rpx; font-weight: bold;">¥{{total}}</text>
+						</text>
+					</u-col>
+					<u-col span="4">
+						<view style="text-align: center; margin: 20rpx 25rpx;width: 160rpx; height: 60rpx; background-color: #ff0844; border-radius: 60rpx;">
+							<text style="color: #FFFFFF;font-size: 30rpx;font-weight: bold;line-height: 60rpx;" @click="createOrder">去结算</text>
+						</view>
+					</u-col>
+				</u-row>
+			</view>
+			
+<!-- 			<view class="action-section">
 				<view class="checkbox">
 					<image 
 						:src="allChecked?'/static/selected.png':'/static/select.png'" 
 						mode="aspectFit"
 						@click="check('all')"
 					></image>
-					<view class="clear-btn" :class="{show: allChecked}" @click="clearCart">
+					<text style="line-height: 100rpx ;">全选</text> -->
+					<!-- <view class="clear-btn" :class="{show: allChecked}" @click="clearCart">
 						清空
-					</view>
-				</view>
+					</view> -->
+			<!-- 	</view>
 				<view class="total-box">
-					<text class="price">¥{{total}}</text>
+					<text class="price">合计：<span style="color: #fa3534; font-weight: bold;">¥{{total}}</span></text> -->
 					<!-- <text class="coupon">
 						已优惠
 						<text>74.35</text>
 						元
 					</text> -->
-				</view>
+<!-- 				</view>
 				<button type="primary" class="no-border confirm-btn" @click="createOrder">去结算</button>
-			</view>
+			</view> -->
 		</view>
 	</view>
 </template>
@@ -127,6 +179,13 @@
 					let list = res.data.data
 					let cartList = list.map(item=>{
 						item.checked = true;
+						if(item.productAttr){
+							let attr = JSON.parse(item.productAttr)
+							item.attr = ''
+							for(var i =0;i<attr.length;i++){
+								item.attr += attr[i].value+" "
+							}
+						}
 						return item;
 					});
 					_self.cartList = cartList;
@@ -163,9 +222,9 @@
 			//数量
 			numberChange(data){
 				var _self=this
-				
+				console.log(data)
 				var id=_self.cartList[data.index].id
-				var quantity=data.number
+				var quantity = data.value
 				var param={"id":id,"quantity":quantity}
 				Api.methods.upCartNum(param).then(function(res){
 					var result=res.data.data.res
@@ -264,6 +323,9 @@
 </script>
 
 <style lang='scss'>
+	customStyle{
+		color: '#fc4f7c'
+	}
 	.container{
 		padding-bottom: 134upx;
 		/* 空白页 */
@@ -301,8 +363,10 @@
 		position:relative;
 		padding:30upx 40upx;
 		.image-wrapper{
-			width: 230upx;
-			height: 230upx;
+			/* width: 230upx;
+			height: 230upx; */
+			width: 110rpx;
+			height: 110rpx;
 			flex-shrink: 0;
 			position:relative;
 			image{
@@ -314,9 +378,9 @@
 			left:-16upx;
 			top: -16upx;
 			z-index: 8;
-			font-size: 44upx;
+			font-size: 40upx;
 			line-height: 1;
-			padding: 4upx;
+			padding: 2upx;
 			color: $font-color-disabled;
 			background:#fff;
 			border-radius: 50px;
@@ -329,16 +393,22 @@
 			position:relative;
 			padding-left: 30upx;
 			.title,.price{
-				font-size:$font-base + 2upx;
+				font-size:26upx;
 				color: $font-color-dark;
-				height: 40upx;
-				line-height: 40upx;
+				height: 30upx;
+				line-height: 30upx;
 			}
 			.attr{
 				font-size: $font-sm + 2upx;
 				color: $font-color-light;
-				height: 50upx;
-				line-height: 50upx;
+				height: 30upx;
+				line-height: 30upx;
+			}
+			.price-num{
+				.price{
+					height: 50upx;
+					line-height:50upx;
+				}
 			}
 			.price{
 				height: 50upx;
@@ -347,35 +417,70 @@
 		}
 		.del-btn{
 			padding:4upx 10upx;
-			font-size:34upx; 
+			font-size:28upx; 
 			height: 50upx;
 			color: $font-color-light;
 		}
 	}
 	/* 底部栏 */
+	.bottom-bar{
+		/* #ifdef H5 */
+		margin-bottom:100upx;
+		/* #endif */
+		position:fixed;
+		/* left: 30upx; */
+		bottom:0upx;
+		z-index: 95;
+		/* display: flex; */
+		/* align-items: center; */
+		width: 100%;
+		height: 100upx;
+		/* padding: 0 30upx; */
+		background: rgba(255,255,255,.9);
+		box-shadow: 0 0 40upx 0 rgba(141, 141, 141, 0.5);
+		.check-img{
+			float: left;
+			margin-left: 30rpx;
+			margin-top: 30rpx;
+			width: 40rpx;
+			height: 40rpx;
+		}
+		.check-text{
+			float: left;
+			padding-left: 10rpx;
+			font-size: 30rpx;
+			font-weight: bold;
+			line-height: 100rpx;
+		}
+		.price{
+			line-height: 50rpx;
+		}
+
+	}
 	.action-section{
 		/* #ifdef H5 */
 		margin-bottom:100upx;
 		/* #endif */
 		position:fixed;
-		left: 30upx;
-		bottom:30upx;
+		/* left: 30upx; */
+		bottom:0upx;
 		z-index: 95;
 		display: flex;
 		align-items: center;
-		width: 690upx;
+		width: 100%;
 		height: 100upx;
 		padding: 0 30upx;
 		background: rgba(255,255,255,.9);
-		box-shadow: 0 0 20upx 0 rgba(0,0,0,.5);
-		border-radius: 16upx;
+		box-shadow: 0 0 10upx 0 rgba(89, 89, 89, 0.5);
+		/* border-radius: 16upx; */
 		.checkbox{
-			height:52upx;
-			position:relative;
+			height:40upx;
+			bottom:30rpx;
+			/* position:relative; */
 			image{
 				width: 52upx;
 				height: 100%;
-				position:relative;
+				/* position:relative; */
 				z-index: 5;
 			}
 		}

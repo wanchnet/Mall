@@ -7,7 +7,6 @@
 		</view>
 
 		<view class="pay-type-list">
-			<!-- #ifndef APP-PLUS -->
 			<view class="type-item b-b" @click="changePayType(1)">
 				<text class="icon yticon icon-weixinzhifu"></text>
 				<view class="con">
@@ -19,7 +18,6 @@
 					</radio>
 				</label>
 			</view>
-			<!-- #endif-->
 			<!-- #ifndef MP-WEIXIN -->
 			<view class="type-item b-b" @click="changePayType(2)">
 				<text class="icon yticon icon-alipay"></text>
@@ -161,6 +159,29 @@
 						console.log(res)
 					})
 					//#endif
+					// #ifdef APP-PLUS
+					Api.methods.wxAppPay(param).then(function(res) {
+						var result=res.data
+						if(result.code ==200){
+							uni.requestPayment({
+								provider: 'wxpay',
+								orderInfo: result.data,
+								success: function(res) {
+									console.log('success:' + JSON.stringify(res));
+									uni.redirectTo({
+										url: '/pages/money/paySuccess?orderSn='+_self.orderInfo.orderSn
+									})
+								},
+								fail: function(err) {
+									console.log('fail:' + JSON.stringify(err));
+									uni.redirectTo({
+										url: '/pages/money/paySuccess?orderSn='+_self.orderInfo.orderSn
+									})
+								}
+							});
+						}
+					})
+					// #endif
 
 				} else if (_self.payType === 2) {
 					//#ifdef H5

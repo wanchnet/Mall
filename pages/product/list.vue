@@ -84,10 +84,8 @@
 			// this.queryParam.categoryId=this.getQueryString("categoryId");
 			// this.queryParam.keyword=this.getQueryString("keyword");
 			this.queryParam.productCategoryId=options.categoryId;
+			this.queryParam.productId=options.productId;
 			this.queryParam.keyword=options.keyword;
-			// #ifdef H5
-			this.headerTop = document.getElementsByTagName('uni-page-head')[0].offsetHeight+'px';
-			// #endif
 			this.cateId = options.tid;
 			this.loadCateList(options.fid,options.sid);
 			this.loadData();

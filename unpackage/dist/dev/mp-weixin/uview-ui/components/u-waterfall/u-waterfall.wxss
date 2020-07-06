@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+.wscnph.data-v-ad895d94 {
+  width: 100% !important;
+}
+image.data-v-ad895d94 {
+  display: inline-block;
+  will-change: transform;
+}
+view.data-v-ad895d94,
+text.data-v-ad895d94 {
+  box-sizing: border-box;
+}
+.u-waterfall.data-v-ad895d94 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+}
+.u-column.data-v-ad895d94 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+}
+.u-image.data-v-ad895d94 {
+  width: 100%;
+}
+

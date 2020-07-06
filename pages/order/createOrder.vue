@@ -22,14 +22,14 @@
 		<view class="goods-section">
 			<view class="g-header b-b">
 				<image class="logo" src="http://duoduo.qibukj.cn/./Upload/Images/20190321/201903211727515.png"></image>
-				<text class="name">桃花潭商城</text>
+				<text class="name">万诚小店</text>
 			</view>
 			<!-- 商品列表 -->
 			<view class="g-item" v-for="(item, index) in orderInfo.list" :key="index">
 				<image :src="encodeURI(item.productPic)"></image>
 				<view class="right">
 					<text class="title clamp">{{item.productName}}</text>
-					<text class="spec">{{item.sp1}} {{item.sp2|isEmpty}}</text>
+					<text class="spec">{{item.attr}}</text>
 					<view class="price-box">
 						<text class="price">￥{{item.price}}</text>
 						<text class="number">x {{item.quantity}}</text>
@@ -203,6 +203,13 @@
 				Api.methods.confirmOrder(param).then(function(res) {
 					if (res.data.code === 200) {
 						_self.orderInfo = res.data.data;
+						_self.orderInfo.list.forEach(item =>{
+							let attr = JSON.parse(item.productAttr)
+							item.attr = ''
+							for(var i =0;i<attr.length;i++){
+								item.attr += attr[i].value+" "
+							}
+						})
 					} else {
 						_self.$api.msg('订单信息有误')
 					}

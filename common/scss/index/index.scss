@@ -2,30 +2,32 @@
 	.mp-search-box{
 		position:absolute;
 		left: 0;
-		top: 30upx;
+		top: 100upx;
 		z-index: 9999;
 		width: 100%;
-		padding: 0 80upx;
+		padding: 0 220upx 40upx 30upx;
 		.ser-input{
 			flex:1;
-			height: 56upx;
-			line-height: 56upx;
+			height: 60upx;
+			line-height: 60upx;
 			text-align: center;
 			font-size: 28upx;
 			color:$font-color-base;
 			border-radius: 20px;
-			background: rgba(255,255,255,.6);
+			// background: rgba(255,255,255,.6);
+			background-color: #FFFFFF;
 		}
 	}
 	page{
 		.cate-section{
-			position:relative;
+			// position:relative;
 			z-index:5;
 			border-radius:16upx 16upx 0 0;
-			margin-top:-20upx;
+			margin-top:20upx;
 		}
 		.carousel-section{
-			padding: 0;
+			
+			padding-top: 80rpx;
 			.titleNview-placing {
 				padding-top: 0;
 				height: 0;
@@ -57,17 +59,18 @@
 
 		.titleNview-placing {
 			height: var(--status-bar-height);
-			padding-top: 44px;
+			padding-top: 30px;
 			box-sizing: content-box;
 		}
 
 		.titleNview-background {
-			background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+			// background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+			background-image: linear-gradient(to top, #ffffff 0%, #ff0844 100%);
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 426upx;
+			height: 526upx;
 			transition: .4s;
 		}
 	}
@@ -140,17 +143,20 @@
 			margin-bottom: 14upx;
 			border-radius: 50%;
 			opacity: .7;
-			box-shadow: 4upx 4upx 20upx rgba(250, 67, 106, 0.3);
+			// box-shadow: 4upx 4upx 20upx rgba(250, 67, 106, 0.3);
 		}
 	}
 	.ad-1{
 		width: 100%;
 		height: 210upx;
-		padding: 10upx 0;
+		// padding: 10upx 0;
 		background: #fff;
 		image{
-			width:100%;
-			height: 100%; 
+			margin-left: 35rpx;
+			margin-right: 35rpx;
+			border-radius: 70rpx;
+			width:calc(100% - 70rpx);
+			height: 80%; 
 		}
 	}
 	/* 秒杀专区 */
@@ -217,14 +223,15 @@
 	.f-header{
 		display:flex;
 		align-items:center;
-		height: 140upx;
+		text-align: center;
+		height: 80upx;
 		padding: 6upx 30upx 8upx;
 		background: #fff;
 		image{
 			flex-shrink: 0;
-			width: 80upx;
-			height: 80upx;
-			margin-right: 20upx;
+			width: 50upx;
+			height: 50upx;
+			// margin-right: 20upx;
 		}
 		.tit-box{
 			flex: 1;
@@ -232,9 +239,10 @@
 			flex-direction: column;
 		}
 		.tit{
-			font-size: $font-lg +2upx;
-			color: #font-color-dark;
+			font-size: 30rpx;
+			color: #606266;
 			line-height: 1.3;
+			font-weight: bold;
 		}
 		.tit2{
 			font-size: $font-sm;
@@ -318,7 +326,7 @@
 		margin-bottom: 20upx;
 		.floor-img-box{
 			width: 100%;
-			height:320upx;
+			height:250upx;
 			position:relative;
 			&:after{
 				content: '';
@@ -337,10 +345,10 @@
 		.floor-list{
 			white-space: nowrap;
 			padding: 20upx;
-			padding-right: 50upx;
+			// padding-right: 50upx;
 			border-radius: 6upx;
-			margin-top:-140upx;
-			margin-left: 30upx;
+			// margin-top:10upx;
+			// margin-left: 10upx;
 			background: #fff;
 			box-shadow: 1px 1px 5px rgba(0,0,0,.2);
 			position: relative;

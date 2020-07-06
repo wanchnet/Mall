@@ -36,6 +36,18 @@ export default {
 				
 			});
 		},
+		getNewProductId(data){
+			const instance = new request();
+			return instance.get({
+				url: "/recommend/getNewProductId",
+				data: data,
+				contentType: 'json',
+				header: {
+					"token":store.state.token
+				}
+				
+			});
+		},
 		getPopularityList(data){
 			const instance = new request();
 			return instance.get({
@@ -48,6 +60,19 @@ export default {
 				xhrFields: {
 					withCredentials: true // 这里设置了withCredentials
 				}
+			});
+		},
+		
+		getPopularityId(data){
+			const instance = new request();
+			return instance.get({
+				url: "/recommend/getPopularityId",
+				data: data,
+				contentType: 'json',
+				header: {
+					"token":store.state.token
+				}
+				
 			});
 		},
 		getNavList(data){
@@ -95,13 +120,42 @@ export default {
 			});
 		},
 		login(data){
-			
 			const instance = new request();
 			return instance.post({
 				url: "/user/login",
 				type: 'post',
 				contentType: 'json',
 				data: JSON.stringify(data),
+				header: {
+					"token":store.state.token
+				},
+				xhrFields: {
+					withCredentials: true // 这里设置了withCredentials
+				}
+			});
+		},
+		checkWeChatUser(data){
+			const instance = new request();
+			return instance.post({
+				url: "/user/checkWeChatUser",
+				type: 'post',
+				contentType: 'json',
+				data: data,
+				header: {
+					"token":store.state.token
+				},
+				xhrFields: {
+					withCredentials: true // 这里设置了withCredentials
+				}
+			});
+		},
+		MPWeChatLogin(data){
+			const instance = new request();
+			return instance.post({
+				url: "/user/MPWeChatLogin",
+				type: 'post',
+				contentType: 'json',
+				data: data,
 				header: {
 					"token":store.state.token
 				},
@@ -672,6 +726,20 @@ export default {
 				}
 			});
 		},
+		wxAppPay(data){
+			const instance = new request();
+			return instance.get({
+				url: "/payCenter/wxpay/intercept/appPay",
+				contentType: 'json',
+				data: data,
+				header: {
+					"token":store.state.token
+				},
+				xhrFields: {
+					withCredentials: true // 这里设置了withCredentials
+				}
+			});
+		},
 		giftPay(data){
 			const instance = new request();
 			return instance.get({
@@ -859,6 +927,48 @@ export default {
 			const instance = new request();
 			return instance.get({
 				url: "/user/checkSms",
+				contentType: 'json',
+				data: data,
+				header: {
+					"token":store.state.token
+				},
+				xhrFields: {
+					withCredentials: true // 这里设置了withCredentials
+				}
+			});
+		},
+		getProductFlashById(data){
+			const instance = new request();
+			return instance.get({
+				url: "/product/getProductFlashById",
+				contentType: 'json',
+				data: data,
+				header: {
+					"token":store.state.token
+				},
+				xhrFields: {
+					withCredentials: true // 这里设置了withCredentials
+				}
+			});
+		},
+		saveHotWords(data){
+			const instance = new request();
+			return instance.get({
+				url: "/HotSearch/saveHotWords",
+				contentType: 'json',
+				data: data,
+				header: {
+					"token":store.state.token
+				},
+				xhrFields: {
+					withCredentials: true // 这里设置了withCredentials
+				}
+			});
+		},
+		getHotWords(data){
+			const instance = new request();
+			return instance.get({
+				url: "/HotSearch/getHotWords",
 				contentType: 'json',
 				data: data,
 				header: {

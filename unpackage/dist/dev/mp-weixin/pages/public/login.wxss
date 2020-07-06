@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+.wscnph {
+  width: 100% !important;
+}
+.content .first {
+  margin-left: 12%;
+  padding-top: 100rpx;
+}
+.content .first .lo-text {
+  display: block;
+  padding-left: 20rpx;
+  font-size: 56rpx;
+  font-weight: bold;
+}
+.content .first .lo-color {
+  width: 160rpx;
+  height: 32rpx;
+  background-image: -webkit-linear-gradient(left, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  margin-top: -28rpx;
+}
+.content .first .re-text {
+  display: block;
+  padding-top: 20rpx;
+  font-size: 24rpx;
+}
+.content .first .re-text .zc {
+  color: #f9758f;
+}
+.content .second {
+  padding-top: 150rpx;
+}
+.content .second .phone {
+  margin-top: 36rpx;
+  margin-left: 12%;
+  height: 80rpx;
+  width: 76%;
+  border-radius: 80rpx;
+  border: 3rpx solid #f9758f;
+}
+.content .second .phone .image {
+  float: left;
+  width: 15%;
+  height: 100%;
+  text-align: center;
+}
+.content .second .phone .image .svg-icon {
+  margin-top: 25rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.content .second .phone .phone-input {
+  height: 100%;
+}
+.content .second .phone .phone-input .phone-input {
+  padding-top: calc(50% - 20rpx);
+}
+.content .second .yzm {
+  margin-top: 36rpx;
+  margin-left: 12%;
+  height: 80rpx;
+  width: 76%;
+}
+.content .second .yzm .yzm-left {
+  float: left;
+  height: 80rpx;
+  width: 68%;
+  border-radius: 80rpx 0 0 80rpx;
+  border: 3rpx solid #f9758f;
+}
+.content .second .yzm .yzm-left .image {
+  float: left;
+  width: 22%;
+  height: 100%;
+  text-align: center;
+}
+.content .second .yzm .yzm-left .image .svg-icon {
+  margin-top: 25rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.content .second .yzm .yzm-left .yzm-input {
+  float: left;
+  height: 100%;
+}
+.content .second .yzm .yzm-right {
+  float: right;
+  height: 80rpx;
+  width: 30%;
+  border-radius: 0 80rpx 80rpx 0;
+  border: 3rpx solid #f9758f;
+}
+.content .second .yzm .yzm-right .yzm-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 80rpx 80rpx 0;
+}
+.content .second .yzm .yzm-right .yzm-img .svg-icon {
+  margin-top: 25rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.content .second .btn-submit {
+  margin-top: 140rpx;
+  margin-left: 12%;
+  height: 80rpx;
+  width: 76%;
+  border-radius: 80rpx;
+  background-image: -webkit-linear-gradient(left, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  text-align: center;
+}
+.content .second .btn-submit .submit-text {
+  line-height: 80rpx;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.content .second .forget-psd {
+  padding-top: 16rpx;
+  text-align: center;
+}
+.content .second .forget-psd .forget-text {
+  font-size: 14px;
+}
+.content .second .wechat {
+  padding-top: 100rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
+.content .second .wechat .wechat-text .line {
+  color: #f9758f;
+}
+.content .second .wechat .wechat-img {
+  margin-top: 40rpx;
+  width: 72px;
+  background-color: white;
+}
+.content .second .wechat .wechat-img .img {
+  width: 72rpx;
+  height: 72rpx;
+}
+.content .wechat-img::after {
+  border: none;
+}
+

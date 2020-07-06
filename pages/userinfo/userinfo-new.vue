@@ -14,28 +14,31 @@
 			<br>
 			<view class="phone">
 				<image class="p-img" src="../../static/phone.png"></image>
-				<text class="p-title" @click="togglePopup('center', 'phone')">{{userInfo.phone}}</text>
+				<text class="p-title" @click="togglePopup('center', 'phone')">{{userInfo.phone || '点击设置'}}</text>
 			</view>
 			<br>
 			<view class="date">
 				<image class="d-img" src="../../static/bir.png"></image>
 				<view class="d-picker">
-					<picker mode="date" :value="userInfo.birthday" :start="startDate" :end="endDate" @change="bindDateChange">
+					<picker mode="date" style="line-height: 50rpx;" :value="userInfo.birthday" :start="startDate" :end="endDate" @change="bindDateChange">
 						<!-- <input type="text" class="d-title" :value="userInfo.birthday" /> -->
-						<text class="d-title" v-if="userInfo.birthday">{{userInfo.birthday}}</text>
-						<text class="d-title" v-if="!userInfo.birthday">未知</text>
+						<text class="d-title">{{userInfo.birthday || '点击设置'}}</text>
 					</picker>
 				</view>
 			</view>
 			<br>
 			<view class="email">
 				<image class="e-img" src="../../static/email.png"></image>
-				<text class="e-title" @click="togglePopup('center', 'email')" v-if="userInfo.email">{{userInfo.email}}</text>
-				<text class="e-title" @click="togglePopup('center', 'email')" v-if="!userInfo.email">未知</text>
+				<text class="e-title" @click="togglePopup('center', 'email')">{{userInfo.email || '点击设置'}}</text>
 			</view>
+			
+			
 		</view>
 		<view class="btn" @click="upUserInfo()">
 			<text class="text" @click="upUserInfo()">保存</text>
+		</view>
+		<view class="" style="text-align: center;width: 100%;bottom: 0rpx;">
+			<text style=" font-size: 20rpx ;">*点击信息进行修改*</text>
 		</view>
 		<!-- 修改弹出窗 -->
 		<uni-popup ref="edit" type="center" :custom="true" :mask-click="false">
@@ -162,6 +165,7 @@
 					balance2:"",
 					integration:"",
 					email:"",
+					birthday:"",
 				},
 				time:false,
 				code:"",
@@ -323,7 +327,7 @@
 				
 			},
 			upUserInfo(){
-				var _self=this;
+				var _self = this;
 				Api.methods.upUserInfo(_self.userInfo).then(function(res){
 					var result = res.data
 					if(result.code === 200){

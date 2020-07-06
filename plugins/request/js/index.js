@@ -4,8 +4,10 @@ var SESSIONID="";
 
 // 设置全局配置
 request.prototype.setConfig({
+    // url: 'https://www.taohuatannj.com/mallApi/',  // 基地址
     // contentType: 'json',
 	url:'https://shop.wanchnet.com/mallApi/',
+	// url:'http://192.168.0.110:9090/mallApi/',
     header: {
           
     },
